@@ -126,7 +126,7 @@ function RegistrationForm() {
       navigate("/");
     } catch (error: unknown) {
       console.log(error)
-      let message = "Error occurred, please try again";
+      const message = "Error occurred, please try again";
       if (error instanceof Error) {
         if (error.message.includes("auth/email-already-in-use")) {
           emailErrorRef.current!.textContent = "This email is already registered";

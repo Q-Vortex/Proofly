@@ -1,7 +1,8 @@
 import admin, { ServiceAccount } from "firebase-admin";
 
 // Инициализация Admin SDK
-const serviceAccount: ServiceAccount = require("./data/serviceAccount.json");
+import serviceAccountJson from "../data/serviceAccount.json";
+const serviceAccount: ServiceAccount = serviceAccountJson as ServiceAccount;
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -40,8 +41,12 @@ export async function cleanUsers() {
         console.log(`Verified user ${uid}, token removed`);
       }
     }
-  } catch (err: any) {
-    console.error("Error cleaning users:", err);
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      console.error("Error cleaning users:", err.message);
+    } else {
+      console.error("Unknown error:", err);
+    }
   }
 }
 
