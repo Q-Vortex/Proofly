@@ -33,7 +33,7 @@ jobs:
           echo "VITE_FIREBASE_STORAGE_BUCKET=${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}" >> ./.env
           echo "VITE_FIREBASE_MESSAGING_SENDER_ID=${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}" >> ./.env
           echo "VITE_FIREBASE_APP_ID=${{ secrets.VITE_FIREBASE_APP_ID }}" >> ./.env
-          echo "VITE_FIREBASE_MEASUREMENT_ID=${{ secrets.VITE_FIREBASE_APP_MEASURMENT_ID }}" >> ./.env
+          echo "VITE_FIREBASE_MEASUREMENT_ID=${{ secrets.VITE_FIREBASE_MEASUREMENT_ID }}" >> ./.env
 
       - name: Build frontend
         run: npm run build
@@ -47,3 +47,4 @@ jobs:
       - name: Decode Firebase Admin JSON
         run: |
           echo ${{ secrets.FIREBASE_ADMIN_JSON_BASE64 }} | base64 --decode > ./backend/serviceAccount.json
+
