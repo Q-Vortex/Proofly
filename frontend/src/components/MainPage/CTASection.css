@@ -1,0 +1,45 @@
+:root {
+  --link-color: #4C1D95;
+  --primary-color: #7C3AED;
+  --secondary-color: #6B21A8;
+  --gradient-color: #A78BFA;
+  --accent-color: #FFFFFF;
+}
+
+.cta_section {
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta_section .head_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta_box {
+  border-radius: 30px;
+  padding: 60px 80px;
+  max-width: 1140px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--gradient-color) 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cta_box h1 { color: var(--accent-color); }
+.cta_box p { color: var(--accent-color); }
+
+.cta_box a {
+  text-decoration: none;
+  padding: 16px 40px;
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  font-weight: bold;
+}
+

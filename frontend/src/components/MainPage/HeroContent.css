@@ -1,0 +1,70 @@
+:root {
+  --link-color: #4C1D95;
+  --primary-color: #7C3AED;
+  --secondary-color: #6B21A8;
+  --gradient-color: #A78BFA;
+  --accent-color: #FFFFFF;
+}
+
+.hero_content_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.hero_content {
+  max-width: 420px;
+  padding: 140px 0;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hero_content h1 {
+  display: flex;
+  gap: 15px;
+}
+
+.hero_content h1 .first_part {
+  color: var(--link-color);
+}
+
+.hero_content h1 .second_part {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--gradient-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero_content p {
+  line-height: 30px;
+}
+
+.hero_buttons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero_buttons a {
+  text-decoration: none;
+  padding: 17px 40px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.hero_buttons .btn_primary {
+  color: var(--accent-color);
+  background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
+}
+
+.hero_buttons .btn_secondary {
+  color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-color) inset;
+}
+
+.ux_0x1 {
+  max-width: 270px;
+}
